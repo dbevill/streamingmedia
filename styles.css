@@ -23,7 +23,6 @@ html {
 .main-header{
     display: grid;
     grid-template-rows: 250px 250px;
-    /*grid-template-columns: 1fr 1fr;*/
     grid-template-areas: 
     "title" "navigation"
     "smoothj" "smoothj";
@@ -86,17 +85,9 @@ h3 {
     color: #590242;
     overflow-x: scroll;
 }
-/*h4 {
-    color: #ffffff;
-}
-h4 p{
-    color: #ffffff;
-}*/
-
 audio{
     position: relative;
     margin-top: -100px;
-    /*max-width: 100px;*/
 }
 .trending::-webkit-scrollbar {
     color: #590242;
@@ -133,6 +124,7 @@ audio{
     display: grid;
     background-color: dimgrey;
     color: #590242;
+    max-width: 311px;
 }
 .allyourplaylists{
     background-color: #590242;
