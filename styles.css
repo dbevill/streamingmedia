@@ -26,9 +26,13 @@ html {
     /*grid-template-columns: 1fr 1fr;*/
     grid-template-areas: 
     "title" "navigation"
-    "smoothj" "smoothj"
-
-    ;
+    "smoothj" "smoothj";
+}
+.title{
+    padding-bottom: 25px;
+}
+nav{
+    padding: 0;
 }
 .main-header{
     display: flex;
