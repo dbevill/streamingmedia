@@ -1,0 +1,233 @@
+html {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 834px;
+    min-height: 100vh;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+/* ----- ROOT STYLES AND VARIABLES ----- */
+*{
+	--dark-blue: #020659;
+	--dark-navy: #020873;
+    --navy-blue: #030ABC;
+    --sky-blue: #0D8DFB;
+    --lt-blue: #2104D9;
+	--dark-gray: #2699FB;
+	--purple: #590242;    
+    --white: #ffffff;
+    --font-family: "Verdana", "Geneva", "Tahoma", sans-serif;
+	--font-size: 16px;
+}
+
+
+.main-header{
+    display: flex;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100vw;
+}
+.main-header h2{
+    order: 3;
+}
+.main-header h1{
+    order: 0;
+}
+header {
+    display: flex;
+    height: 100px;
+    max-width: 100%vw;
+    background-color: #020873;
+    color:#ffffff;
+}
+h2{
+    display: block;
+}
+h3 {
+    background-color: #ffffff;
+    color: #590242;
+    font-weight: bold ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.trending {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    max-width: 100vw;
+    grid-template-areas: 
+    "track" "track" "track" "track" "track";
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #590242;
+    overflow-x: scroll;
+}
+/*h4 {
+    color: #ffffff;
+}
+h4 p{
+    color: #ffffff;
+}*/
+
+audio{
+    position: relative;
+    margin-top: -100px;
+    /*max-width: 100px;*/
+}
+.trending::-webkit-scrollbar {
+    color: #590242;
+}
+.trending::-webkit-scrollbar-track {
+    color: #8f6684;
+}
+.trending::-webkit-scrollbar-thumb {
+    background-color: #590242;
+}
+.trending::-webkit-scrollbar-thumb:hover {
+    color: #590242;
+}
+.otherlists{
+    display: grid;
+    grid-template-columns: 417px 417px;
+    color:#ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-content: center;
+}
+.YourPlaylists {
+    display: grid;
+    background-color: #0D8DFB;
+}
+.CuratedPlaylists{
+    background-color: #030ABC;
+    margin: 0 auto;
+}
+.CuratedPlaylists img{
+    align-content: space-around;
+}
+.tracks{
+    display: grid;
+    background-color: dimgrey;
+    color: #590242;
+}
+.allyourplaylists{
+    background-color: #590242;
+	font-weight: bold;
+	margin: 3rem auto;
+	border-radius: 0.5rem;
+	width: calc(100% - 1rem);
+	max-width: 200px;
+    padding: 1rem;
+}
+.morecurated{
+    background-color: #590242;
+	font-weight: bold;
+	margin: 3rem auto;
+	border-radius: 0.5rem;
+	width: calc(100% - 1rem);
+	max-width: 200px;
+    padding: 1rem;
+    color: #ffffff;
+}
+.morecurated a {
+    color: #ffffff;
+}
+.allyourplaylists a:hover{
+    color: #ffffff;
+    filter: var(--filter-shadow-lg);
+    background-color: #020659;
+}
+footer{
+    color: #590242;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ----- MOBILE FIRST STYLES AND VARIABLES ----- */
+nav {
+    width:375px;
+    background-color: #020873;
+}
+nav ul {
+    text-align:center;
+    margin:0;
+    padding:0;
+    list-style:none;
+    overflow:hidden;
+    max-height:0;
+    transition: max-height .2s ease-out;
+}
+nav h2 {
+    visibility:hidden;
+    height:1px;
+}
+nav li a {
+    display:block;
+    padding:20px 20px;
+    text-decoration:none;
+    color:white;
+}
+nav a:hover, nav input:hover {
+    background-color: black;
+}
+nav label {
+    cursor: pointer;
+    display: inline-block;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+}
+label span {
+    background-color: #ffffff;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background-color .2s ease-out;
+    width: 18px;
+}
+label span:before, label span:after {
+    background: #ffffff;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+label span:before {
+    top: 5px;
+}
+label span:after {
+    top: -5px;
+}
+input {
+display:none;
+}
+input:checked ~ ul {
+    max-height: 500px;
+}
+input:checked ~ label span {
+    background: transparent;
+}
+input:checked ~ label span:before {
+    transform: rotate(-45deg);
+}
+input:checked ~ label span:after {
+    transform: rotate(45deg);
+}
+input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    top: 0;
+}
+@media screen and (min-width: 834px){
+nav {
+width:834px;
+}
+nav ul {
+    overflow:visible;
+    position:absolute;
+    top:25px;
+    display:flex;
+}
+nav li a {
+    padding:20px;
+}
+label span, input {
+    display:none;
+}
